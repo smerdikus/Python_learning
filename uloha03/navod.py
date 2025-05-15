@@ -3,9 +3,10 @@
     Zde si procvicime jeste praci s poli a pak praci s for loopem.
 """
 
-# na zacatek ukolu se naucime exit()
-# tento exit vzdy zakomentujete, kdyz pochopite latku nad nim a "odkomentuje" pro dalsi latku
+# na zacatek ukolu se naucime co dela exit()
+# tento exit vzdy zakomentujete, kdyz pochopite latku nad nim
 # zakomentovat a odkomentovat zname vlozit # pred radek a odebrat # pred radkem
+# exit() aby to vypadalo takto
 exit() # toto ukonci program, takze nic pod nasim exit() se uz nestane
 
 # Zopakovani prace s polem
@@ -22,7 +23,7 @@ exit()
 
 # ale muzeme si vsimnout, ze vypis neni uplne nejhezci, pokud bysme chteli aby byl vypis pouze znaku, musime takto
 for ch in pole1:
-    # toto nam do ch ulozi postupne kazdou promennou tohoto pole
+    # toto nam do ch ulozi postupne kazdy prvek tohoto pole
     # Uz vime, ze end='' znamena ze se na konci vypisu ch neudela nova radka ale vypise se '' (to co je uvnitr uvozovek, coz je nic)
     print(ch, end='') # pojmenovavam si to jako ch, protoze je to takzvany charakter (ascii znak, pro zajimavost si doporucuji najit co je ascii tabulka)
     
