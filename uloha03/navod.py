@@ -3,6 +3,11 @@
     Zde si procvicime jeste praci s poli a pak praci s for loopem.
 """
 
+# na zacatek ukolu se naucime exit()
+# tento exit vzdy zakomentujete, kdyz pochopite latku nad nim a "odkomentuje" pro dalsi latku
+# zakomentovat a odkomentovat zname vlozit # pred radek a odebrat # pred radkem
+exit() # toto ukonci program, takze nic pod nasim exit() se uz nestane
+
 # Zopakovani prace s polem
 
 # Toto vytvori nove prazdne pole
@@ -13,12 +18,15 @@ pole1 = ['#', '.', '#', '#', '.', '#']
 
 print(pole1)  # print(pole) nam vypise nase pole promennych
 
+exit()
+
 # ale muzeme si vsimnout, ze vypis neni uplne nejhezci, pokud bysme chteli aby byl vypis pouze znaku, musime takto
 for ch in pole1:
     # toto nam do ch ulozi postupne kazdou promennou tohoto pole
     # Uz vime, ze end='' znamena ze se na konci vypisu ch neudela nova radka ale vypise se '' (to co je uvnitr uvozovek, coz je nic)
     print(ch, end='') # pojmenovavam si to jako ch, protoze je to takzvany charakter (ascii znak, pro zajimavost si doporucuji najit co je ascii tabulka)
     
+exit()
 print("\n\n") # pouze pro oddeleni naseho vypisu, urcite uz vite co dela toto
 
 
@@ -26,7 +34,9 @@ print("\n\n") # pouze pro oddeleni naseho vypisu, urcite uz vite co dela toto
 for i in range(len(pole1)):
     print(pole1[i], end='') # neboli pro kazde cislo, ktere je od 0 do delky pole (len(pole1)) vypiseme z pole prvek na pozici i (pole1[i])
 
+exit()
 print("\n\n") # pouze pro oddeleni naseho vypisu, urcite uz vite co dela toto
+
 
 
 # abysme mohli ukladat bludiste, potrebovali bysme ale pro kazdy radek jine pole napriklad takto
@@ -57,6 +67,7 @@ for m in range(len(pole4)):
     print(pole4[m], end='')
 print() # tyto print() nam vzdy udelaji novou radku za kazdym radkem, jinak by se vypsaly radky hned za sbou
 
+exit()
 
 # co takhle ale dat vsechny pole do jednoho "pole polí"
 bludiste = [pole0, pole1, pole2, pole3, pole4]
@@ -65,6 +76,7 @@ bludiste = [pole0, pole1, pole2, pole3, pole4]
 for radek in bludiste:
     print(radek)
 
+exit()
 print("\n\n") # toto uz vime
     
 # to by se dalo vyresit uz nasim znamym zpusobem
@@ -75,11 +87,14 @@ for radek in bludiste:
         print(radek[i], end='')
     print() # po kazdem radku musime zacit na novou radku (print() prida '\n' na konec radky, proto to potrebujeme, jinak by se psaly radky za sebe
 
+
+exit()
 # dalo by se ale jeste indexovat dovnitr pres 2 hranate zavorky [][]
 # napriklad kdyz chceme prvek na prvnim radku, na druhem miste, tak musime do bludiste indexovat takto:
 print(bludiste[0][1]) # pamatujte ze cislujeme od 0, takze 0 je prvni prvek, 1 je druhy
 print(bludiste[3][1]) # toto je treba prvek na 4. radku na 2. miste
 
+exit()
 print("\n\n")
 
 # takze zase zkusime timto zpusobem
@@ -88,7 +103,8 @@ for y in range(len(bludiste)): # projedeme kazde cislo y, jako ocislovani vsech 
         print(bludiste[y][x], end='') # toto je prvek na pozici [y][x] v bludisti, to ale jede pres cele pole po x a po y
         # zkuste si nakreslit treba na papir pole a pak co je x a co je y
     print() # toto uz vime proc potrebujeme, za kazdy radek musime dat novy radek
-    
+
+exit()
 print("\n\n")
     
 # co ted ale s hracem, pokud bysme meli napriklad pozici hrace ulozene jako
@@ -104,8 +120,9 @@ for y in range(len(bludiste)):
         else:
             print(bludiste[y][x], end='') # jinak vykreslujeme blok v bludisti
     print()
-    
-    
+
+
+exit()
 print("\n\n")
 
 # ted prichazi zasadni vec v programovani: funkce
@@ -113,6 +130,7 @@ print("\n\n")
 for i in range(10):
     print('*' * i)
 
+exit()
 # ted si predstavte ze chcete vykreslit znovu, potom byste museli vzdy napsat tento for loop, na to ale mame funkce
 # ty se tvori takto:
 def funkce(): # nazev funkce a v zavorce jsou tzv parametry (vysvetlime pozdeji)
@@ -130,6 +148,8 @@ funkce()
 # ted se zamyslete, co je napriklad print()
 # ano, print() je funkce, kde napriklad print('r', end='') je funkce kde davame parametr 'r' ze se vypise r a end='' ze na konec radku se nevypise '\n' ale ''
 
+exit() # uz vime, ze exit() je funkce, ktera ukoncuje program
+
 # tak co si ted vytvorit treba funkci pro vykresleni bludiste
 def print_bludiste():
     print("\n\n") # pred kazdym bludistem si udelame 2 prazdne radky
@@ -142,12 +162,14 @@ def print_bludiste():
         
         print()
 
-        
+
+exit()
 # zamyslete se jak by se ted vykreslilo bludiste?
 
-# takto
+# jednoduse takto
 print_bludiste()
 
+exit()
 # ted kdyz napriklad zmenime pozici hrace
 player_x = 1
 player_y = 2
@@ -155,17 +177,21 @@ player_y = 2
 # tak vykresleni bludiste rovnou hrace vykresli na teto pozici
 print_bludiste()
 
+exit()
 # ted uz je pohyb hracem v bludisti jednoduchy, napriklad
 # promenna += cislo dela to, ze do promenna pricte cislo (slo by taky promenna = promenna + cislo, takze += je jednodussi)
 player_y += 1 # posune hrace o 1 dolu
 print_bludiste()
 
+exit()
 player_x += 1 # posune hrace doprava o 1
 print_bludiste()
 
+exit()
 player_x += 1 # += prida do promenne player_x 1, -= odecte od promenne 1
 print_bludiste()
 
+exit()
 player_y -= 1 # posune hrace nahoru o 1
 print_bludiste()
 
