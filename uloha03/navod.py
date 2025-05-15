@@ -150,10 +150,26 @@ print_bludiste()
 
 # ted kdyz napriklad zmenime pozici hrace
 player_x = 1
-player_y = 3
+player_y = 2
 
 # tak vykresleni bludiste rovnou hrace vykresli na teto pozici
 print_bludiste()
+
+# ted uz je pohyb hracem v bludisti jednoduchy, napriklad
+# promenna += cislo dela to, ze do promenna pricte cislo (slo by taky promenna = promenna + cislo, takze += je jednodussi)
+player_y += 1 # posune hrace o 1 dolu
+print_bludiste()
+
+player_x += 1 # posune hrace doprava o 1
+print_bludiste()
+
+player_x += 1 # += prida do promenne player_x 1, -= odecte od promenne 1
+print_bludiste()
+
+player_y -= 1 # posune hrace nahoru o 1
+print_bludiste()
+
+
 
 # to je asi vse, zkuste vse pochopit proc co a jak funguje, pripadne se mi ozvete, vse vysvetlime, mail: smerdikus@gmail.com nebo whatsapp
 
