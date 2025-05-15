@@ -9,6 +9,8 @@
 # exit() aby to vypadalo takto
 exit() # toto ukonci program, takze nic pod nasim exit() se uz nestane
 
+# na konci navodu byste meli mit vsechny exit() radky zakomentovane, takze pred kazdym exit() by mel byt #
+
 # Zopakovani prace s polem
 
 # Toto vytvori nove prazdne pole
